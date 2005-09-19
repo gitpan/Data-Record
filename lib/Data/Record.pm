@@ -9,11 +9,11 @@ Data::Record - "split" on steroids
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 use constant NOT_FOUND    => -1;
 use constant ALL_RECORDS  => -1;
 use constant TRIM_RECORDS => 0;
@@ -22,10 +22,10 @@ use constant TRIM_RECORDS => 0;
 
   use Regexp::Common;
   use Data::Record;
-  my $record = Data::Record->new(
+  my $record = Data::Record->new({
     split  => "\n",
     unless => $RE{quoted},
-  );
+  });
   my @data = $record->records($data);
 
 =head1 DESCRIPTION
@@ -46,10 +46,10 @@ split on newlines unless newlines are embedded in quotes.
 
 Common usage:
 
- my $record = Data::Record->new(
+ my $record = Data::Record->new({
     split  => qr/$split/,
     unless => qr/$unless/,
- );
+ });
 
 Advanced usage:
 
@@ -478,7 +478,9 @@ your bug as I make changes.
 =head1 ACKNOWLEDGEMENTS
 
 Thanks to the Monks for inspiration from
-L<http://perlmonks.org/index.pl?node_id=492002|this thread>.
+L<http://perlmonks.org/index.pl?node_id=492002>.
+
+0.02 Thanks to Smylers and Stefano Rodighiero for catching POD errors.
 
 =head1 COPYRIGHT & LICENSE
 

@@ -1,6 +1,6 @@
 ---
 name: Data-Record
-version: 0.01
+version: 0.02
 author:
   - Curtis "Ovid" Poe <moc.oohay@eop_divo_sitruc>
 abstract: '"split" on steroids'
@@ -15,5 +15,5 @@ build_requires:
 provides:
   Data::Record:
     file: lib/Data/Record.pm
-    version: 0.01
+    version: 0.02
 generated_by: Module::Build version 0.2702
